@@ -1,0 +1,425 @@
+.editable-text-box span {
+  font-size: 1rem;
+  color: #b39dfa;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1.5px solid #6f4cff;
+  background: #18162b;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: text;
+  min-height: 2.2em;
+}
+
+.editable-text-box span:hover {
+  background: #2d234a;
+  color: #fff;
+  border-color: #b39dfa;
+}
+.app-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.side-img {
+  width: 20%;
+  max-height: 80vh;
+  z-index: 2;
+}
+
+.bottom-img {
+  position: absolute;
+  width: 15vw;
+  bottom: 0;
+  left: 0;
+}
+
+.top-left-img {
+  position: absolute;
+  height: 20vh;
+  width: auto;
+  top: 5vh;
+  left: 5vw;
+}
+
+.bottom-right-img {
+  position: absolute;
+  height: 30vh;
+  width: auto;
+  bottom: 0;
+  right: 0;
+}
+
+.floating-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body {
+  background: #18162b;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e7e3fa;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  position: relative;
+  z-index: 1;
+  background: rgba(32, 26, 54, 0.97);
+  max-width: 900px;
+  width: 100%;
+  margin: 3rem auto 0 auto;
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  color: #e7e3fa;
+  border: 2px solid #e0b3ff;
+  box-shadow: 0 2px 16px 0 #e0b3ff44;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #e0b3ff;
+  text-shadow: 0 0 1px #e0b3ff, 0 0 3px #b366ff, 0 0 16px #e0b3ff66;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+  background: none;
+}
+
+.counter-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.counter-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.counter-container > div {
+  background: #221c38;
+  border: 2px solid #6f4cff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(161, 138, 255, 0.1);
+  padding: 1.2rem 1.5rem;
+  min-width: 120px;
+  text-align: center;
+  flex: 1 1 0;
+  transition: box-shadow 0.2s, border 0.2s;
+  color: #e7e3fa;
+}
+
+.counter-container > div:hover {
+  box-shadow: 0 4px 16px rgba(161, 138, 255, 0.18);
+  border-color: #b39dfa;
+}
+
+.counter-container p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b39dfa;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.counter-value {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.7rem;
+}
+
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.counter-btn {
+  background: #2d234a;
+  color: #b39dfa;
+  border: 1.5px solid #b39dfa;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+
+.counter-btn:hover {
+  background: #b39dfa;
+  color: #221c38;
+  border-color: #6f4cff;
+}
+
+.counter-btn:active {
+  background: #6f4cff;
+  color: #fff;
+}
+
+.total-label {
+  font-size: 0.85rem;
+  color: #b39dfa;
+  font-style: italic;
+}
+
+/* Neon counter box styles */
+.counter-box.neon-blue {
+  border-color: #00eaff;
+  box-shadow: 0 2px 16px 0 #00eaff44;
+}
+.counter-box.neon-blue .counter-btn {
+  color: #00eaff;
+  border-color: #00eaff;
+}
+.counter-box.neon-blue .counter-btn:hover {
+  background: #00eaff;
+  color: #18162b;
+}
+.counter-box.neon-blue p {
+  color: #00eaff;
+}
+
+.counter-box.neon-green {
+  border-color: #39ff14;
+  box-shadow: 0 2px 16px 0 #39ff1444;
+}
+.counter-box.neon-green .counter-btn {
+  color: #39ff14;
+  border-color: #39ff14;
+}
+.counter-box.neon-green .counter-btn:hover {
+  background: #39ff14;
+  color: #18162b;
+}
+.counter-box.neon-green p {
+  color: #39ff14;
+}
+
+.counter-box.neon-pink {
+  border-color: #ff00de;
+  box-shadow: 0 2px 16px 0 #ff00de44;
+}
+.counter-box.neon-pink .counter-btn {
+  color: #ff00de;
+  border-color: #ff00de;
+}
+.counter-box.neon-pink .counter-btn:hover {
+  background: #ff00de;
+  color: #18162b;
+}
+.counter-box.neon-pink p {
+  color: #ff00de;
+}
+
+.counter-box.neon-yellow {
+  border-color: #fff700;
+  box-shadow: 0 2px 16px 0 #fff70044;
+}
+.counter-box.neon-yellow .counter-btn {
+  color: #fff700;
+  border-color: #fff700;
+}
+.counter-box.neon-yellow .counter-btn:hover {
+  background: #fff700;
+  color: #18162b;
+}
+.counter-box.neon-yellow p {
+  color: #fff700;
+}
+.counter-box.neon-yellow .total-label {
+  color: #fff700;
+}
+
+/* --- Text Sections --- */
+.dashboard-row.text-sections {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.text-sections-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.text-section-container {
+  background: #211d32;
+  border: 2px solid #6f4cff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(161, 138, 255, 0.1);
+  min-width: 0;
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 0;
+  max-width: 100%;
+  color: #e7e3fa;
+}
+
+.text-section-container:first-child {
+  flex: 0 1 30%;
+  min-width: 180px;
+}
+.text-section-container:last-child {
+  flex: 0 1 70%;
+  min-width: 260px;
+}
+
+.text-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b39dfa;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.text-section-cute-img {
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+/* --- EditableTextBox --- */
+.editable-text-box {
+  margin: 0.4rem 0;
+  width: 100%;
+}
+
+.editable-text-box textarea {
+  font-size: 1rem;
+  color: #e7e3fa;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1.5px solid #6f4cff;
+  background: #18162b;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  min-height: 2.2em;
+}
+
+.editable-text-box textarea:focus {
+  border-color: #b39dfa;
+  background: #221c38;
+  color: #fff;
+}
+
+/* Neon orange for ARCollectedBox */
+.text-section-container.neon-orange {
+  border-color: #ffb300;
+  box-shadow: 0 2px 16px 0 #ffb30044;
+}
+.text-section-container.neon-orange:hover {
+  border-color: #ffb300;
+  box-shadow: 0 4px 24px 0 #ffb30077;
+}
+.text-section-container.neon-orange .text-section-title {
+  color: #ffb300;
+}
+
+/* Neon pink for TextSection and EditableTextBox */
+.text-section-container.neon-pink {
+  border-color: #ff6ec7;
+  box-shadow: 0 2px 16px 0 #ff6ec744;
+}
+.text-section-container.neon-pink:hover {
+  border-color: #ff6ec7;
+  box-shadow: 0 4px 24px 0 #ff6ec777;
+}
+.text-section-container.neon-pink .text-section-title {
+  color: #ff6ec7;
+}
+.text-section-container.neon-pink .editable-text-box span {
+  color: #ff6ec7;
+  border: 1.5px solid #ff6ec7;
+  background: #18162b;
+}
+.text-section-container.neon-pink .editable-text-box span:hover {
+  background: #2d234a;
+  color: #fff;
+  border-color: #ff6ec7;
+}
+
+/* --- AR Collected Box --- */
+.ar-collected-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 0.5rem;
+  background: transparent;
+}
+
+.ar-collected-input {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  background: #221c38;
+  color: #fff;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+/* Reset Button */
+.reset-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  font-size: 1rem;
+  padding: 0.6rem 2rem;
+  background: #221c38;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(161, 138, 255, 0.07);
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #2d254b;
+}

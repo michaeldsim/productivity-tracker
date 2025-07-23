@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-bg">
+      <img
+        src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyMGc2Z3JjeDNmbmlubjVsbGcyZmhtc3d1Z3g2YmRvYmlqaHh2bnUycyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/eLv7gJpxqiQtbNNQUe/source.gif"
+        alt=""
+        class="side-img floating-img"
+      />
+      <img
+        src="https://i.pinimg.com/originals/4a/5b/78/4a5b78c2df2637811de6e047588155db.gif"
+        alt=""
+        class="bottom-img"
+      />
+      <img
+        src="https://www.blindbox.eu/design_f/img/labubu_shop.png"
+        alt=""
+        class="bottom-right-img"
+      />
+      <img
+        src="https://giffiles.alphacoders.com/426/4266.gif"
+        alt=""
+        class="top-left-img"
+      />
+
+      <div class="dashboard">
+        <div class="dashboard-header">
+          <h1>Productivity Tracker</h1>
+        </div>
+
+        <div class="dashboard-row counter-row">
+          <div class="counter-container">
+            <div class="counter-box neon-blue">
+              <p>Touched</p>
+              <div class="counter-value" data-counter="touched">0</div>
+              <div class="counter-controls">
+                <button
+                  class="counter-btn"
+                  data-action="decrement"
+                  data-counter="touched"
+                >
+                  -
+                </button>
+                <button
+                  class="counter-btn"
+                  data-action="increment"
+                  data-counter="touched"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="counter-box neon-green">
+              <p>Submitted</p>
+              <div class="counter-value" data-counter="submitted">0</div>
+              <div class="counter-controls">
+                <button
+                  class="counter-btn"
+                  data-action="decrement"
+                  data-counter="submitted"
+                >
+                  -
+                </button>
+                <button
+                  class="counter-btn"
+                  data-action="increment"
+                  data-counter="submitted"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="counter-box neon-pink">
+              <p>Re-Classed</p>
+              <div class="counter-value" data-counter="reclassed">0</div>
+              <div class="counter-controls">
+                <button
+                  class="counter-btn"
+                  data-action="decrement"
+                  data-counter="reclassed"
+                >
+                  -
+                </button>
+                <button
+                  class="counter-btn"
+                  data-action="increment"
+                  data-counter="reclassed"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="counter-box neon-yellow">
+              <p>Total</p>
+              <div class="counter-value" data-counter="total">0</div>
+              <div class="counter-controls"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-row text-sections">
+          <div class="text-sections-container">
+            <div class="text-section-container neon-orange">
+              <div class="ar-collected-box">
+                <div class="text-section-title">AR Collected</div>
+                <input
+                  type="number"
+                  class="ar-collected-input"
+                  id="arCollected"
+                  value="0"
+                  min="0"
+                />
+              </div>
+            </div>
+
+            <div class="text-section-container neon-pink">
+              <div class="text-section-title">Other Activities</div>
+              <div class="text-section-content">
+                <div class="editable-text-box">
+                  <span class="editable-span" data-index="0"></span>
+                </div>
+                <div class="editable-text-box">
+                  <span class="editable-span" data-index="1"></span>
+                </div>
+                <div class="editable-text-box">
+                  <span class="editable-span" data-index="2"></span>
+                </div>
+                <div class="editable-text-box">
+                  <span class="editable-span" data-index="3"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="reset-btn neon-white" id="resetBtn">Reset</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
